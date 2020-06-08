@@ -4,7 +4,8 @@ The server recieves a mixed sequence of PUT/GET requests by the client. A PUT re
 Upon termination, it provides a basic statistical analysis of service time.
 
 ## Workflow
-<p>Using the Server-Client model, the client defines the Key-Value pair that will be stored or the Key based on which the corresponding value will be retrieved. He communicates with the server through a network socket. The server recovers the pair/key from the incoming request, accesses the storage to save or retrieve a pair and responds to the client. Finally, the client shows the result on screen.</p>
+<p>Using the Server-Client model, the client defines the Key-Value pair that will be stored or the Key based on which the corresponding value will be retrieved. He communicates with the server through a network socket. The server recovers the pair or key from the incoming request, accesses the storage to save or retrieve a pair and responds to the client.\
+Finally, the client shows the result on screen.</p>
 
 <p>The server is based on the Producer-Consumer model. A producer thread is waiting for incoming requests while a predefined number of consumer threads is responsible for serving them. When the server recieves a new request, the producer thread adds the connection descriptor to a shared FIFO queue. Then, a consumer thread extracts the descriptor from the queue and carries out the PUT or GET request.
 The consumer threads remain idle until a new request reaches the server. Upon arrival of the request, the producer thread prepairs a structure (the aforementioned *connection descriptor*) containing the file descriptor of the socket connection plus, the connection arrival time. The structure is then added to the shared queue and the consumer threads are notified to carry on with their task.
@@ -34,3 +35,5 @@ To run the client, in a new terminal, type:
 ```
 ./client
 ```
+To terminate the server, on server's terminal send a SIGSTP signal with `Ctrl + Z`.
+The statistical analysis of service time is then calculated and presented to screen.
