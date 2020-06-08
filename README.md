@@ -21,7 +21,7 @@ Assigned during *Operating Systems* course of University of Ioannina during the 
 The single threaded implementation has been provided by [S. Anastasiadis](http://www.cse.uoi.gr/~stergios/) and [G. Kappes](http://www.cs.uoi.gr/~gkappes/).
 
 # How to run
-Compile with any major version of gcc. The oldest tested version is 7.5.0.
+Compile with any major version of gcc. The oldest tested version is 7.5.0.\
 Copy the .c, .h and Makefile to your directory of choice, navigate there and compile with make:
 ```
 make all
