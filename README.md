@@ -1,4 +1,4 @@
-# Multithreaded Kay-Value Server
+# Multithreaded Key-Value Server
 A simple multithreaded server storing and retrieving key-value pairs.\
 The server recieves a mixed sequence of PUT/GET requests by the client. A PUT request saves a new Key-Value pair. A GET request retrieves an existing value based on a key.\
 Upon termination, it provides a basic statistical analysis of service time.
