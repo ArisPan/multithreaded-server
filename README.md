@@ -12,6 +12,25 @@ The queue can be accessed simultaneously by one consumer thread and one producer
 
 <p>To test the multithreaded implementation of the server, the client had to be able to send multiple requests at a time so, a multithreaded implementation of him was necessary. Each client thread randomly creates one or more PUT or GET requests with a random Key and Value which then is sent to the server. Upon completion of the requests, the client shows the elapsed time.</p>
 
+# Libraries
+The multithreaded implementation is based on Linux's POSIX threads.\
+[KISSDB](https://github.com/adamierymenko/kissdb) is used for the Key-Value storage.
+
 # Motive
 Assigned during *Operating Systems* course of University of Ioannina during the spring semester of 2020.
 The single threaded implementation has been provided by [S. Anastasiadis](http://www.cse.uoi.gr/~stergios/) and [G. Kappes](http://www.cs.uoi.gr/~gkappes/).
+
+# How to run
+Compile with any major version of gcc. The oldest tested version is 7.5.0.
+Copy the .c, .h and Makefile to your directory of choice, navigate there and compile with make:
+```
+make all
+```
+To run the server type:
+```
+./server
+```
+To run the client, in a new terminal, type:
+```
+./client
+```
