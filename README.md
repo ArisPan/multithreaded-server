@@ -1,6 +1,7 @@
 # Multithreaded Key-Value Server
 A simple multithreaded server storing and retrieving key-value pairs.\
-The server recieves a mixed sequence of PUT/GET requests by the client. A PUT request saves a new Key-Value pair. A GET request retrieves an existing value based on a key.\
+The server recieves a mixed sequence of PUT/GET requests by the client. A PUT request saves a new Key-Value pair.\
+A GET request retrieves an existing value based on a key.\
 Upon termination, it provides a basic statistical analysis of service time.
 
 ## Workflow
@@ -35,5 +36,5 @@ To run the client, in a new terminal, type:
 ```
 ./client
 ```
-To terminate the server, on server's terminal send a SIGSTP signal with `Ctrl + Z`.
+To terminate the server, on server's terminal, send a SIGSTP signal with `Ctrl + Z`.\
 The statistical analysis of service time is then calculated and presented to screen.
